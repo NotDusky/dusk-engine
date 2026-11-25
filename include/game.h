@@ -1,0 +1,22 @@
+#pragma once
+#include <vector>
+
+#define GLAD_GL_IMPLEMENTATION
+#include <glad/gl.h>
+#define GLFW_INCLUDE_NONE
+#include <GLFW/glfw3.h>
+
+#include "window.h"
+
+class Game {
+public:
+    Game();
+    ~Game();
+
+    void init();
+
+    void run();
+
+private:
+    std::vector<Window*> windows;
+};
